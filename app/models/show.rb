@@ -21,11 +21,11 @@ class Show < ActiveRecord::Base
   end 
   
   def self.popular_shows 
-    self.where
+    self.where(self)
   end 
   
   def self.shows_by_alphabetical_order 
-    self.order(self)
+    self.order(:name)
   end 
   
 end
